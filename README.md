@@ -1,4 +1,4 @@
-﻿# AgentX
+﻿# JobHuntX - An AI Job Companion 
 
 **The Offline LLM + Creative Suite (100% Local, 100% Free)**
 
