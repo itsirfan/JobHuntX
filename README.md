@@ -1,9 +1,19 @@
-# JobHuntX - An AI Job Companion
+# JobHuntX - An AI Creative Suite
 
 **The Offline LLM + Creative Suite (100% Local, 100% Free)**
 
 JobHuntX is a local AI desktop/web app by **WapVenture**.
+It gives you a private, offline AI workspace for chatting with local LLMs, generating music from text prompts, and managing future image/video workflows from one interface.
 It runs directly on your PC with no cloud dependency for chat and no subscription fees.
+
+## What This Software Does
+
+JobHuntX lets you use AI tools on your own computer instead of relying on a cloud service. In the current build, you can:
+
+- chat with a local Ollama model
+- attach files and images to conversations
+- generate music locally with MusicGen
+- manage creative work from Chat, Music, Image Studio, and Video Studio tabs
 
 ![JobHuntX Chat](assets/screenshots/chat.png)
 
