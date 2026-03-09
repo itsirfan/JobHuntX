@@ -726,6 +726,36 @@ body {
 
 .btn-attach { flex-shrink: 0; }
 
+.btn-mic,
+.btn-voice-output {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.btn-mic.active {
+    background: var(--danger);
+    color: white;
+    animation: micPulse 1.2s ease-in-out infinite;
+}
+
+.btn-voice-output.active {
+    color: var(--accent);
+    background: var(--accent-light);
+}
+
+.btn-mic:disabled,
+.btn-voice-output:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+@keyframes micPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.35); }
+    50% { box-shadow: 0 0 0 6px rgba(239, 68, 68, 0); }
+}
+
 /* Model toggle pills */
 .model-toggle {
     display: flex;
@@ -809,6 +839,124 @@ body {
     max-width: 768px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.voice-status {
+    text-align: center;
+    font-size: 11px;
+    color: var(--text-muted);
+    min-height: 15px;
+    margin-top: 4px;
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.voice-status.active {
+    color: var(--accent);
+}
+.voice-orb-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    margin-bottom: 2px;
+}
+
+.voice-orb {
+    width: 84px;
+    height: 84px;
+    border: none;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    cursor: pointer;
+    position: relative;
+    background: radial-gradient(circle at 30% 30%, #9a8cff 0%, #6f59e8 55%, #4f3ccf 100%);
+    box-shadow: 0 12px 30px rgba(111, 89, 232, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    animation: orbFloat 4s ease-in-out infinite, orbGlow 2.2s ease-in-out infinite;
+}
+
+.voice-orb::before,
+.voice-orb::after {
+    content: '';
+    position: absolute;
+    border-radius: 999px;
+    pointer-events: none;
+}
+
+.voice-orb::before {
+    width: 102px;
+    height: 102px;
+    border: 2px solid rgba(124, 111, 224, 0.45);
+    animation: orbRing 2.6s linear infinite;
+}
+
+.voice-orb::after {
+    width: 8px;
+    height: 8px;
+    top: 8px;
+    right: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: -14px 10px 0 rgba(255, 255, 255, 0.45), -2px 20px 0 rgba(255, 255, 255, 0.28);
+    animation: sparkle 1.7s ease-in-out infinite;
+}
+
+.voice-orb:hover {
+    transform: translateY(-2px) scale(1.02);
+    filter: brightness(1.06);
+}
+
+.voice-orb.listening {
+    background: radial-gradient(circle at 30% 30%, #ff7f7f 0%, #ef4444 60%, #b91c1c 100%);
+    box-shadow: 0 14px 34px rgba(239, 68, 68, 0.4);
+    animation: orbListening 1s ease-in-out infinite;
+}
+
+.voice-orb.processing,
+.voice-orb.speaking {
+    background: radial-gradient(circle at 30% 30%, #6cc8ff 0%, #2563eb 60%, #1d4ed8 100%);
+    box-shadow: 0 14px 34px rgba(37, 99, 235, 0.38);
+}
+
+.voice-orb.disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    animation: none;
+}
+
+.voice-orb-label {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+@keyframes orbFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+}
+
+@keyframes orbGlow {
+    0%, 100% { box-shadow: 0 12px 30px rgba(111, 89, 232, 0.32); }
+    50% { box-shadow: 0 16px 38px rgba(111, 89, 232, 0.48); }
+}
+
+@keyframes orbRing {
+    0% { transform: scale(0.9); opacity: 0.95; }
+    100% { transform: scale(1.2); opacity: 0; }
+}
+
+@keyframes sparkle {
+    0%, 100% { transform: scale(0.7); opacity: 0.5; }
+    50% { transform: scale(1.15); opacity: 1; }
+}
+
+@keyframes orbListening {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.45), 0 14px 34px rgba(239, 68, 68, 0.4); }
+    50% { box-shadow: 0 0 0 14px rgba(239, 68, 68, 0), 0 14px 34px rgba(239, 68, 68, 0.4); }
 }
 
 /* ===== Music Tab ===== */
@@ -1411,6 +1559,20 @@ body {
 
     .input-area {
         padding: 0 12px 12px;
+    }
+
+    .voice-orb {
+        width: 72px;
+        height: 72px;
+    }
+
+    .voice-orb::before {
+        width: 90px;
+        height: 90px;
+    }
+
+    .voice-orb-label {
+        font-size: 11px;
     }
 
     .studio-container {
