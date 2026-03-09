@@ -1,4 +1,4 @@
-# JobHuntX - An AI Creative Suite
+# JobHuntX (An AI Creative Suite)
 
 **The Offline LLM + Creative Suite (100% Local, 100% Free)**
 
@@ -13,7 +13,7 @@ JobHuntX lets you use AI tools on your own computer instead of relying on a clou
 - chat with a local Ollama model
 - attach files and images to conversations
 - generate music locally with MusicGen
-- manage creative work from Chat, Music, Image Studio, and Video Studio tabs
+- manage creative work from Chat and Music today, with Image Studio and Video Studio included as future-facing tabs
 
 ![JobHuntX Chat](assets/screenshots/chat.png)
 
