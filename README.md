@@ -1,13 +1,13 @@
-﻿# JobHuntX - An AI Job Companion 
+# JobHuntX - An AI Job Companion
 
 **The Offline LLM + Creative Suite (100% Local, 100% Free)**
 
-AgentX is a local AI desktop/web app by **WapVenture**.
+JobHuntX is a local AI desktop/web app by **WapVenture**.
 It runs directly on your PC with no cloud dependency for chat and no subscription fees.
 
-![AgentX Chat](assets/screenshots/chat.png)
+![JobHuntX Chat](assets/screenshots/chat.png)
 
-## Why AgentX
+## Why JobHuntX
 
 - Runs locally on your computer (privacy-first workflow)
 - No monthly subscription required
@@ -16,7 +16,7 @@ It runs directly on your PC with no cloud dependency for chat and no subscriptio
 
 ## Model Modes for Chat
 
-AgentX supports multiple local Ollama models and groups them into practical usage tiers:
+JobHuntX supports multiple local Ollama models and groups them into practical usage tiers:
 
 | Mode | Best For | Typical Examples |
 |---|---|---|
@@ -68,7 +68,7 @@ AgentX supports multiple local Ollama models and groups them into practical usag
 
 ## Local-First Promise
 
-AgentX is built for users who want AI power without handing data to paid cloud tools.
+JobHuntX is built for users who want AI power without handing data to paid cloud tools.
 Your workflows stay on your PC, and you remain in control of your models and outputs.
 
 ## Quick Start (Windows)
@@ -102,4 +102,3 @@ http://localhost:8000
 ## License
 
 Private project by WapVenture.
-

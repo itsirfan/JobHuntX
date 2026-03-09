@@ -1,5 +1,5 @@
-// ============================================================
-//  AgentX — AI Creative Suite
+﻿// ============================================================
+//  JobHuntX â€” AI Creative Suite
 //  Main Application JavaScript
 // ============================================================
 
@@ -148,7 +148,7 @@ function setupEventListeners() {
 // ============================================================
 
 function loadTheme() {
-    const theme = localStorage.getItem('agentx-theme') || 'dark';
+    const theme = localStorage.getItem('jobhuntx-theme') || 'dark';
     document.documentElement.setAttribute('data-theme', theme);
     updateThemeButton(theme);
     updateHljsTheme(theme);
@@ -158,7 +158,7 @@ function toggleTheme() {
     const current = document.documentElement.getAttribute('data-theme');
     const next = current === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', next);
-    localStorage.setItem('agentx-theme', next);
+    localStorage.setItem('jobhuntx-theme', next);
     updateThemeButton(next);
     updateHljsTheme(next);
 }
@@ -349,7 +349,7 @@ async function deleteConversation(convId) {
 }
 
 // ============================================================
-//  CHAT — SEND MESSAGE
+//  CHAT â€” SEND MESSAGE
 // ============================================================
 
 async function sendMessage() {
@@ -409,7 +409,7 @@ window.sendHint = function(text) {
 };
 
 // ============================================================
-//  CHAT — STREAMING
+//  CHAT â€” STREAMING
 // ============================================================
 
 async function streamResponse(payload) {
@@ -541,7 +541,7 @@ function stopGenerating() {
 }
 
 // ============================================================
-//  CHAT — MESSAGES
+//  CHAT â€” MESSAGES
 // ============================================================
 
 function appendMessage(role, content, isStreaming) {
@@ -1084,3 +1084,4 @@ window.copyCode = function(btn) {
         setTimeout(() => btn.textContent = 'Copy', 2000);
     });
 };
+

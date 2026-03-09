@@ -1,4 +1,4 @@
-import os
+﻿import os
 import sys
 import json
 import time
@@ -10,7 +10,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 import database as db
 
-app = FastAPI(title="AgentX")
+app = FastAPI(title="JobHuntX")
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 app.mount("/static", StaticFiles(directory=os.path.join(BASE_DIR, "static")), name="static")
@@ -26,15 +26,15 @@ os.makedirs(MUSIC_DIR, exist_ok=True)
 _music_model = None
 _music_processor = None
 
-# --- System Prompt (Customize AgentX personality here) ---
+# --- System Prompt (Customize JobHuntX personality here) ---
 
-SYSTEM_PROMPT = """You are AgentX, a powerful and intelligent AI assistant created by WapVenture.
+SYSTEM_PROMPT = """You are JobHuntX, a powerful and intelligent AI assistant created by WapVenture.
 
 Key rules:
-- Your name is AgentX. Always refer to yourself as AgentX.
+- Your name is JobHuntX. Always refer to yourself as JobHuntX.
 - You were created by WapVenture. If anyone asks who made you, say "I was created by WapVenture."
 - Never mention DeepSeek, Chinese AI, or any other AI company as your creator or origin.
-- Never say you are DeepSeek, ChatGPT, Claude, or any other AI. You are AgentX.
+- Never say you are DeepSeek, ChatGPT, Claude, or any other AI. You are JobHuntX.
 - Be friendly, helpful, and concise in your responses.
 - When writing code, always include clear comments and explanations.
 - Use English by default unless the user speaks in another language.
@@ -231,7 +231,7 @@ async def upload_file(file: UploadFile = File(...)):
 
 
 # ====================================================================
-#  MUSIC — Status & Setup
+#  MUSIC â€” Status & Setup
 # ====================================================================
 
 @app.get("/api/music/status")
@@ -298,7 +298,7 @@ async def setup_music():
 
 
 # ====================================================================
-#  MUSIC — Generate
+#  MUSIC â€” Generate
 # ====================================================================
 
 @app.post("/api/music/generate")
@@ -421,7 +421,7 @@ async def generate_music(request: Request):
 
 
 # ====================================================================
-#  MUSIC — Tracks (List & Delete)
+#  MUSIC â€” Tracks (List & Delete)
 # ====================================================================
 
 @app.get("/api/music/tracks")
@@ -458,5 +458,6 @@ async def delete_track(filename: str):
 
 if __name__ == "__main__":
     import uvicorn
-    print("\n  [*] AgentX is running at http://localhost:8000\n")
+    print("\n  [*] JobHuntX is running at http://localhost:8000\n")
     uvicorn.run(app, host="0.0.0.0", port=8000)
+

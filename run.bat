@@ -1,10 +1,10 @@
-@echo off
+﻿@echo off
 chcp 65001 >nul 2>&1
-title AgentX by WapVenture
+title JobHuntX by WapVenture
 
 echo.
 echo    ========================================
-echo       AgentX by WapVenture
+echo       JobHuntX by WapVenture
 echo    ========================================
 echo    Chat + Music + Image + Video
 echo    ========================================
@@ -43,7 +43,7 @@ if errorlevel 1 (
 )
 
 echo.
-echo [*] Starting AgentX on http://localhost:8000
+echo [*] Starting JobHuntX on http://localhost:8000
 echo [*] Open this URL in your browser
 echo [*] Press Ctrl+C to stop
 echo.
@@ -51,3 +51,4 @@ echo.
 start http://localhost:8000
 .venv\Scripts\python app.py
 pause
+

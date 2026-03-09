@@ -1,9 +1,9 @@
-import sqlite3
+﻿import sqlite3
 import os
 import json
 from datetime import datetime
 
-DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "agentx.db")
+DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "jobhuntx.db")
 
 
 def get_connection():
@@ -167,3 +167,4 @@ def delete_music_track(filename):
 
 # Initialize DB on import
 init_db()
+
