@@ -10,10 +10,10 @@ It runs directly on your PC with no cloud dependency for chat and no subscriptio
 
 JobHuntX lets you use AI tools on your own computer instead of relying on a cloud service. In the current build, you can:
 
-- chat with a local Ollama model
-- attach files and images to conversations
-- generate music locally with MusicGen
-- manage creative work from Chat and Music today, with Image Studio and Video Studio included as future-facing tabs
+- Chat with a local Ollama model
+- Attach files and images to conversations
+- Generate music locally with MusicGen
+- Manage creative work from Chat and Music today, with Image Studio and Video Studio included as future-facing tabs
 
 ![JobHuntX Chat](assets/screenshots/chat.png)
 
